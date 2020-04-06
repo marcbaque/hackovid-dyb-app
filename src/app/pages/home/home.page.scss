@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-balance {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-list {
+        flex: 1;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: var(--ion-color-step-100);
+    }
+}

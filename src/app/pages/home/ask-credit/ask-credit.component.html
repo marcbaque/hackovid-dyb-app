@@ -1,0 +1,28 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>{{ 'ask-credit.title' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="step === 'LOADING'" (click)="dismissModal()"> {{ 'ask-credit.dismiss' | translate }} </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <div class="ask-credit ask-credit-presentation ion-padding" *ngIf="step === 'PRESENTATION'">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <p>{{ 'ask-credit.presentation.info' | translate }}</p>
+    <ion-button (click)="confirm()" expand="block">{{ 'ask-credit.presentation.confirm' | translate }}</ion-button>
+  </div>
+  <div class="ask-credit ask-credit-loading" *ngIf="step === 'LOADING'">
+    <ion-icon name="cloud-upload-outline"></ion-icon>
+    <p>{{ 'ask-credit.loading.info' | translate }}</p>
+    <ion-spinner></ion-spinner>
+  </div>
+  <div class="ask-credit ask-credit-success" *ngIf="step === 'SUCCESS'">
+    <ion-icon color="success" name="shield-checkmark-outline"></ion-icon>
+    <h3>{{ 'ask-credit.success.info' | translate:{value: value} }}</h3>
+  </div>
+  <div class="ask-credit ask-credit-error" *ngIf="step === 'ERROR'">
+    <ion-icon color="danger" name="close-circle-outline"></ion-icon>
+    <h3>{{ error }}</h3>
+  </div>
+</ion-content>

@@ -1,0 +1,55 @@
+{
+    "onboarding": {
+        "1": {
+            "title": "Recieve credits",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec."
+        },
+        "2": {
+            "title": "Pay your tickets",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec."
+        },
+        "3": {
+            "title": "Track your transactions",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec."
+        },
+        "dismiss": "Continue"
+    },
+    "signup": {
+        "title": "Signup",
+        "header": "Welcome!",
+        "form": {
+            "name": "Full name",
+            "email": "Email",
+            "nif": "NIF",
+            "password": "Password",
+            "confirm-password": "Confirm password"
+        },
+        "submit": "Signup"
+    },
+    "home": {
+        "title": "T2",
+        "ask": "Ask credit",
+        "transactions": "Transactions"
+    },
+    "transaction": {
+        "articles": "articles"
+    },
+    "ask-credit": {
+        "title": "Ask credit",
+        "dismiss": "Close",
+        "presentation": {
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec.",
+            "confirm": "Confirm"
+        },
+        "loading": {
+            "info": "Confirming transaction..."
+        },
+        "success": {
+            "info": "You recieved {{value}}€"
+        },
+        "error": {
+            "500": "Generic error",
+            "fallback": "Unexpected error occurred"
+        }
+    }
+}

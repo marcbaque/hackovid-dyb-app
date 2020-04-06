@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'signup.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="signup-header ion-padding">
+    {{ 'signup.header' | translate }}
+  </div>
+  <ion-list lines="full" class="ion-no-margin">      
+    <ion-item>
+      <ion-label position="floating">{{ 'signup.form.name' | translate }} <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="formData.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">{{ 'signup.form.email' | translate }} <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="formData.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">{{ 'signup.form.nif' | translate }} <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="formData.nif"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">{{ 'signup.form.password' | translate }} <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="formData.password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">{{ 'signup.form.confirm-password' | translate }} <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="formData.confirmPassword"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-button (click)="signup()" expand="block" class="ion-no-margin">{{ 'signup.submit' | translate }}</ion-button>
+  </div>
+</ion-content>
+

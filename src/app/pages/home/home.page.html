@@ -1,0 +1,45 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-title>{{ 'home.title' | translate }}</ion-title>
+    <ion-buttons collapse="true" slot="end">
+      <ion-button [routerLink]="['/onboarding']">
+        <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-header collapse="condense">              
+    <ion-toolbar>      
+      <ion-title size="large">{{ 'home.title' | translate }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button collapse="true" [routerLink]="['/onboarding']">
+          <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div class="home">
+    <div class="home-balance ion-padding">
+      <h2>
+        {{ balance }}€
+      </h2>
+      <ion-button size="large" shape="round" (click)="presentAskCreditModal()">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-list class="home-list ion-padding">
+      <ion-list-header>
+        {{ 'home.transactions' | translate}}
+      </ion-list-header>
+      <app-transaction *ngFor="let transaction of transactions" [transaction]="transaction"></app-transaction>
+    </ion-list>
+  </div>  
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="barcode-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

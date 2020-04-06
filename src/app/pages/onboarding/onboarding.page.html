@@ -1,0 +1,24 @@
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+  <ion-slides pager="true">
+    <ion-slide>
+      <div class="slide">
+        <ion-icon class="onboarding-icon" name="cash-outline"></ion-icon>
+        <h2>{{ 'onboarding.1.title' | translate }}</h2>
+        <p>{{ 'onboarding.1.description' | translate }}</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-icon class="onboarding-icon" name="card-outline"></ion-icon>
+      <h2>{{ 'onboarding.2.title' | translate }}</h2>
+      <p>{{ 'onboarding.2.description' | translate }}</p>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-icon class="onboarding-icon" name="list-outline"></ion-icon>
+      <h2>{{ 'onboarding.3.title' | translate }}</h2>
+      <p>{{ 'onboarding.3.description' | translate }}</p>
+      <ion-button (click)="dismiss()" fill="clear">{{ 'onboarding.dismiss' | translate }} <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
