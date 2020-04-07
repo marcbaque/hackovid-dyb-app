@@ -29,7 +29,11 @@
     "home": {
         "title": "T2",
         "ask": "Ask credit",
-        "transactions": "Transactions"
+        "transactions": "Transactions",
+        "verify": {
+            "products": "Products",
+            "total": "Total"
+        }
     },
     "transaction": {
         "articles": "articles"

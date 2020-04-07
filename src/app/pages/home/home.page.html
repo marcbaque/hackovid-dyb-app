@@ -33,9 +33,33 @@
       <ion-list-header>
         {{ 'home.transactions' | translate}}
       </ion-list-header>
-      <app-transaction *ngFor="let transaction of transactions" [transaction]="transaction"></app-transaction>
+      <app-transaction *ngFor="let transaction of transactions" [transaction]="transaction" (onVerify)="presentTransactionDetails(transaction)"></app-transaction>
     </ion-list>
-  </div>  
+  </div>
+
+  <div class="cupertino-pane">
+    <div class="header">
+      <div class="header-start">
+        <h1>{{ activeTransaction?.seller?.name }}</h1>
+        <p>#{{ activeTransaction?.id }} - {{ activeTransaction?.date | date: 'dd/MM/yyyy HH:mm'}}</p>
+      </div>
+      <ion-button fill="clear">
+        <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="body" hide-on-bottom overflow-y>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>{{ 'home.verify.products' | translate }}</ion-label>
+        </ion-list-header>
+        <ion-item lines="none" *ngFor="let item of activeTransaction?.products">
+          <ion-label>{{ item.name }}</ion-label>
+          <ion-note slot="end"> x{{ item.count }} </ion-note>
+        </ion-item>
+      </ion-list>
+      <p class="ion-padding"> <b> {{'home.verify.total' | translate }}:</b> {{ activeTransaction?.total }}{{ activeTransaction?.currency }} </p>
+    </div>
+  </div>
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button>

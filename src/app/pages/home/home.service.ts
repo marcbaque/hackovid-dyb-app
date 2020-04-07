@@ -21,102 +21,354 @@ export class HomeService {
     return of([
       new TransactionEntity({
         id: 1,
-        count: 12,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 2,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 3,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 4,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 5,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 5,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 5,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 5,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 5,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
       new TransactionEntity({
-        id: 5,
-        count: 12,
+        id: 1,
+        products: [
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          },
+          {
+            id: 1,
+            name: "Colacao",
+            price: 1.23,
+            count: 1
+          }
+        ],
+        seller: {
+          name: "Bonpreu"
+        },
         total: 12.21,
         currency: '€',
         date: new Date()
       }),
-      new TransactionEntity({
-        id: 5,
-        count: 12,
-        total: 12.21,
-        currency: '€',
-        date: new Date()
-      }),
-      new TransactionEntity({
-        id: 5,
-        count: 12,
-        total: 12.21,
-        currency: '€',
-        date: new Date()
-      }),
-      new TransactionEntity({
-        id: 5,
-        count: 12,
-        total: 12.21,
-        currency: '€',
-        date: new Date()
-      }),
-      new TransactionEntity({
-        id: 5,
-        count: 12,
-        total: 12.21,
-        currency: '€',
-        date: new Date()
-      })
     ]).pipe(
       delay(500)
     )
