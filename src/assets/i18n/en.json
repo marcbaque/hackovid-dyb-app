@@ -27,7 +27,8 @@
         "submit": "Signup"
     },
     "home": {
-        "title": "T2",
+        "title": "Do Your Bit",
+        "balance": "Balance",
         "ask": "Ask credit",
         "transactions": "Transactions",
         "verify": {

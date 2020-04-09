@@ -22,12 +22,16 @@
   </ion-header>
   <div class="home">
     <div class="home-balance ion-padding">
-      <h2>
-        {{ balance }}€
-      </h2>
-      <ion-button size="large" shape="round" (click)="presentAskCreditModal()">
+      <div class="home-balance-item">
+        <h2>
+          {{ balance }}€
+        </h2>
+        <p> {{ 'home.balance' | translate }} </p>
+      </div>
+      <div class="home-balance-add" (click)="presentAskCreditModal()">
         <ion-icon slot="icon-only" name="add-outline"></ion-icon>
-      </ion-button>
+        <p>{{ 'home.ask' | translate }}</p>
+      </div>
     </div>
     <ion-list class="home-list ion-padding">
       <ion-list-header>
@@ -38,7 +42,7 @@
   </div>
 
   <div class="cupertino-pane">
-    <div class="header">
+    <div class="header" *ngIf="activeTransaction">
       <div class="header-start">
         <h1>{{ activeTransaction?.seller?.name }}</h1>
         <p>#{{ activeTransaction?.id }} - {{ activeTransaction?.date | date: 'dd/MM/yyyy HH:mm'}}</p>
@@ -47,7 +51,7 @@
         <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
       </ion-button>
     </div>
-    <div class="body" hide-on-bottom overflow-y>
+    <div class="body" hide-on-bottom overflow-y *ngIf="activeTransaction">
       <ion-list>
         <ion-list-header>
           <ion-label>{{ 'home.verify.products' | translate }}</ion-label>
@@ -61,7 +65,7 @@
     </div>
   </div>
 
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" (click)="scanQr()">
     <ion-fab-button>
       <ion-icon name="barcode-outline"></ion-icon>
     </ion-fab-button>
