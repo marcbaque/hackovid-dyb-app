@@ -4,9 +4,9 @@ import { ModalController, Platform } from '@ionic/angular';
 import { AskCreditComponent } from './ask-credit/ask-credit.component';
 import { CupertinoPane } from 'cupertino-pane';
 import TransactionEntity from './transaction/transaction.entity';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import TicketEntity from 'src/app/core/entities/ticket.entity';
 import { PayComponent } from './pay/pay.component';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-home',
@@ -69,12 +69,22 @@ export class HomePage implements OnInit {
 
   public async scanQr() {
     let ticket;
-    if (this.platform.is("capacitor")) {
-      ticket = await this.barcodeScanner.scan();
+    if (this.platform.is("cordova")) {
+      try {
+        let scanned = await this.barcodeScanner.scan();
+        console.log(scanned, JSON.parse(scanned.text))
+        this.presentPayModal(JSON.parse(scanned.text))
+      } catch (error) {
+        console.error(error)
+      }
+      
     } else {
       ticket = JSON.parse('{"id":13,"seller":{"id":"0x9120f8532Be92B004819De8Dc22E5fa2830860F2","name":"Mercadona"},"products":[{"id":2,"name":"Producte 2","_price":2,"count":1},{"id":4,"name":"Producte 4","_price":4,"count":2},{"id":1,"name":"Producte 1","_price":1,"count":1}],"date":1586435068915}');
+      this.presentPayModal(ticket)
     }
+  }
 
+  async presentPayModal(ticket) {
     const modal = await this.modalController.create({
       component: PayComponent,
       componentProps: ticket

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
@@ -12,6 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TransactionComponent } from './transaction/transaction.component';
 import { AskCreditComponent } from './ask-credit/ask-credit.component';
 import { PayComponent } from './pay/pay.component';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @NgModule({
   imports: [

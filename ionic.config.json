@@ -1,5 +1,7 @@
 {
   "name": "hackovid-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

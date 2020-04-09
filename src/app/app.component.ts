@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Web3Service } from './core/web3/web3.service';
 import { Router } from '@angular/router';
 
-import * as cp from 'cupertino-pane';
+import 'cupertino-pane';
 
 @Component({
   selector: 'app-root',
