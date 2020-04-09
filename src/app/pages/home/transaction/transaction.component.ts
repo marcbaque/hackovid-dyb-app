@@ -3,6 +3,7 @@ import { CupertinoPane } from 'cupertino-pane';
 
 import TransactionEntity from './transaction.entity';
 import { IonItemSliding } from '@ionic/angular';
+import TicketEntity from 'src/app/core/entities/ticket.entity';
 
 @Component({
   selector: 'app-transaction',
@@ -13,8 +14,8 @@ export class TransactionComponent implements OnInit {
 
   @ViewChild('itemSliding', { static: true }) public itemSliding: IonItemSliding; 
 
-  @Input() public transaction: TransactionEntity;
-  @Output() public onVerify = new EventEmitter<TransactionEntity>();
+  @Input() public transaction: TicketEntity;
+  @Output() public onVerify = new EventEmitter<TicketEntity>();
 
   constructor() { }
 

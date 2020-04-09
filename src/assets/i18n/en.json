@@ -56,5 +56,14 @@
             "500": "Generic error",
             "fallback": "Unexpected error occurred"
         }
+    },
+    "pay": {
+        "title": "Pay",
+        "dismiss": "Close",
+        "submit": "Pay now",
+        "waiting-transaction": "Waiting for transaction...",
+        "success": "Payment successful",
+        "error": "There was a problem with the payment",
+        "retry": "Retry"
     }
 }

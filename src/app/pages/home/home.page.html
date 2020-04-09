@@ -37,7 +37,7 @@
       <ion-list-header>
         {{ 'home.transactions' | translate}}
       </ion-list-header>
-      <app-transaction *ngFor="let transaction of transactions" [transaction]="transaction" (onVerify)="presentTransactionDetails(transaction)"></app-transaction>
+      <app-transaction *ngFor="let ticket of tickets" [transaction]="ticket" (onVerify)="presentTransactionDetails(ticket)"></app-transaction>
     </ion-list>
   </div>
 

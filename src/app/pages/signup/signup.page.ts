@@ -13,9 +13,7 @@ export class SignupPage implements OnInit {
   public formData = {
     name: '',
     email: '',
-    nif: '',
-    password: '',
-    confirmPassword: ''
+    nif: ''
   }
 
   constructor(
@@ -28,7 +26,7 @@ export class SignupPage implements OnInit {
   public signup() {
     console.log(this.formData)
 
-    this.signupService.signupUser(this.formData.name, this.formData.email, this.formData.nif, this.formData.password)
+    this.signupService.signupUser(this.formData.name, this.formData.email, this.formData.nif)
       .subscribe(res => {
         console.log(res)
         this.router.navigate(['/home']);
