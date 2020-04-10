@@ -31,6 +31,7 @@
         "balance": "Balance",
         "ask": "Ask credit",
         "transactions": "Transactions",
+        "no-data": "No transactions",
         "verify": {
             "products": "Products",
             "total": "Total"
@@ -50,7 +51,7 @@
             "info": "Confirming transaction..."
         },
         "success": {
-            "info": "You recieved {{value}}€"
+            "info": "Credit recieved succesfuly"
         },
         "error": {
             "500": "Generic error",

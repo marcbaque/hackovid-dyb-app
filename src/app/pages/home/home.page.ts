@@ -30,6 +30,10 @@ export class HomePage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.fetchData()
+  }
+
+  public fetchData() {
     this.homeService.getBalance()
       .subscribe(balance => {
         this.balance = balance;
@@ -45,6 +49,10 @@ export class HomePage implements OnInit {
     const modal = await this.modalController.create({
       component: AskCreditComponent
     });
+
+    modal.onDidDismiss()
+      .then(() => this.fetchData())
+
     return await modal.present();
   }
 
@@ -79,7 +87,7 @@ export class HomePage implements OnInit {
       }
       
     } else {
-      ticket = JSON.parse('{"id":13,"seller":{"id":"0x9120f8532Be92B004819De8Dc22E5fa2830860F2","name":"Mercadona"},"products":[{"id":2,"name":"Producte 2","_price":2,"count":1},{"id":4,"name":"Producte 4","_price":4,"count":2},{"id":1,"name":"Producte 1","_price":1,"count":1}],"date":1586435068915}');
+      ticket = JSON.parse('{"id":15,"seller":{"id":"0xb3294cE62e9aF759266e4b4aEf5AF237ad6EFE95","name":"Mercadona"},"products":[{"id":1,"name":"Producte 1","_price":1,"count":1}],"date":1586504294780}');
       this.presentPayModal(ticket)
     }
   }
@@ -89,6 +97,10 @@ export class HomePage implements OnInit {
       component: PayComponent,
       componentProps: ticket
     });
+
+    modal.onDidDismiss()
+      .then(() => this.fetchData())
+
     return await modal.present();
   }
 }

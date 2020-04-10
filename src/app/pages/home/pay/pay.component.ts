@@ -49,23 +49,16 @@ export class PayComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('PAY')
+    this.status = 'WAITING';
 
-    this.homeService.updateTicket(this.ticket)
+    this.homeService.payTicket(this.ticket)
       .subscribe(res => {
         console.log(res)
-      })
-
-    this.status = 'WAITING';
-    setTimeout(() => {
-      let rand = Math.random();
-  
-      if (rand > 0.5) {
         this.status = 'SUCCESS'
-      } else {
-        this.status = 'ERROR';
-      }
-    }, 2000)
+      }, err => {
+        console.log(err)
+        this.status = 'ERROR'
+      })
   }
 
 }

@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Web3Service } from 'src/app/core/web3/web3.service';
 import { of } from 'rxjs';
-import { delay, map } from 'rxjs/internal/operators';
+import { delay, map, switchMap } from 'rxjs/internal/operators';
 import TransactionEntity from './transaction/transaction.entity';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import TicketEntity from 'src/app/core/entities/ticket.entity';
 import ProductEntity from 'src/app/core/entities/product.entity';
+import { tick } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -50,11 +51,34 @@ export class HomeService {
       )
   }
 
+  public payTicket(ticket: TicketEntity) {
+    let txReceipt;
+    return this.web3Service.prepareTransfer(ticket.seller.id, ticket.total)
+      .pipe(
+        switchMap(receipt => {
+          console.log(receipt)
+          txReceipt = receipt;
+
+          ticket.buyer = {
+            id: this.web3Service.getAccount()
+          };
+          ticket.transactionHash = receipt.transactionHash;
+          return this.updateTicket(ticket);
+        }),
+        switchMap(() => {
+          return this.web3Service.transfer(txReceipt);
+        }),
+        switchMap(() => {
+          return this.web3Service.waitTransaction(txReceipt.transactionHash);
+        })
+      );
+  }
+
   public updateTicket(ticket: TicketEntity) {
     const body = {
       hash: ticket.getHash(),
-      tx_hash: "0x2d695003e941EA33354a10A69F4ca11da869871b",
-      buyer: this.web3Service.getAccount()
+      tx_hash: ticket.transactionHash,
+      buyer: ticket.buyer ? ticket.buyer.id : null
     }
 
     return this.http.put(`${environment.apiUrl}/tickets/${ticket.id}`, body);

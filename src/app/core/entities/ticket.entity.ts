@@ -1,17 +1,17 @@
 import ProductEntity from './product.entity';
-import { JsonPipe } from '@angular/common';
+import { Hash } from '@enchainte/sdk';
 
 export default class TicketEntity {
     public id: number;
     public buyer: {
-        name: string;
-        publicKey: string;
-        nif: string;
+        id: string;
+        name?: string;
+        nif?: string;
     }
     public seller: {
         id: string;
-        name: string;
-        cif: string;
+        name?: string;
+        cif?: string;
     }
     public products: ProductEntity[] = [];
     public total: string = '0.00';
@@ -64,8 +64,15 @@ export default class TicketEntity {
         })
     }
 
-    public getHash() {
-        return '0001.102839'
+    public getHash(): string {
+        return Hash.fromString(JSON.stringify({
+            id: this.id,
+            seller: this.seller.id,
+            buyer: this.buyer.id,
+            products: this.products,
+            date: this.date.getTime(),
+            transactionHash: this.transactionHash
+        })).getHash();
     }
 
     private calculateTotal() {

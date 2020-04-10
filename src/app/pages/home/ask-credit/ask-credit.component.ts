@@ -12,7 +12,6 @@ export class AskCreditComponent implements OnInit {
 
   public step: 'PRESENTATION' | 'LOADING' | 'SUCCESS' | 'ERROR' = 'PRESENTATION';
 
-  public value = 0;
   public error = '';
 
   constructor(
@@ -32,7 +31,7 @@ export class AskCreditComponent implements OnInit {
 
     this.web3Service.askCredit()
       .subscribe((res: any) => {
-        this.value = res.value;
+        console.log(res)
         this.step = 'SUCCESS';
       }, (error: any) => {
         let errorMessage = this.translate.instant(`ask-credit.error.${error.code}`);

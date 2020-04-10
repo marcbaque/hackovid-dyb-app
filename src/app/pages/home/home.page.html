@@ -37,7 +37,12 @@
       <ion-list-header>
         {{ 'home.transactions' | translate}}
       </ion-list-header>
-      <app-transaction *ngFor="let ticket of tickets" [transaction]="ticket" (onVerify)="presentTransactionDetails(ticket)"></app-transaction>
+      <div *ngIf="tickets.length > 0">
+        <app-transaction *ngFor="let ticket of tickets" [transaction]="ticket" (onVerify)="presentTransactionDetails(ticket)"></app-transaction>
+      </div>
+      <div class="home-list-no-data" *ngIf="tickets.length === 0">
+        {{ 'home.no-data' | translate }}
+      </div>
     </ion-list>
   </div>
 
@@ -61,7 +66,7 @@
           <ion-note slot="end"> x{{ item.count }} </ion-note>
         </ion-item>
       </ion-list>
-      <p class="ion-padding"> <b> {{'home.verify.total' | translate }}:</b> {{ activeTransaction?.total }}{{ activeTransaction?.currency }} </p>
+      <p class="ion-padding"> <b> {{'home.verify.total' | translate }}:</b> {{ activeTransaction?.total }}€ </p>
     </div>
   </div>
 
