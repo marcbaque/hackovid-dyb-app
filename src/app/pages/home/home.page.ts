@@ -15,7 +15,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 })
 export class HomePage implements OnInit {
 
-  public balance: number = 0;
+  public balance: string = '0.00';
   public tickets: TicketEntity[] = [];
 
   public activeTransaction: TransactionEntity;
@@ -36,7 +36,7 @@ export class HomePage implements OnInit {
   public fetchData() {
     this.homeService.getBalance()
       .subscribe(balance => {
-        this.balance = balance;
+        this.balance = balance.toFixed(2);
       })
 
     this.homeService.getTransactionList()
@@ -87,7 +87,7 @@ export class HomePage implements OnInit {
       }
       
     } else {
-      ticket = JSON.parse('{"id":15,"seller":{"id":"0xb3294cE62e9aF759266e4b4aEf5AF237ad6EFE95","name":"Mercadona"},"products":[{"id":1,"name":"Producte 1","_price":1,"count":1}],"date":1586504294780}');
+      ticket = JSON.parse('{"id":1,"seller":{"id":"0xF7d6d3b5e3bBbF46267dF46603a7508F5Ddec2c9","name":"Bonpreu"},"products":[{"id":4,"name":"Xocolata blanca amb xurros","_price":2.3,"count":2},{"id":2,"name":"Nocilla","_price":0.9,"count":1},{"id":1,"name":"Colacao","_price":1.2,"count":1},{"id":3,"name":"Donut de xocolata","_price":1,"count":10}],"date":1586516804311}');
       this.presentPayModal(ticket)
     }
   }

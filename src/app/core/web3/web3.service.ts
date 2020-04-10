@@ -81,7 +81,7 @@ export class Web3Service {
   }
 
   public askCredit() {
-    return from(this.send(this.donationCenterContract, this.donationCenterContract.methods.getSubidy()))
+    return from(this.send(this.donationCenterContract, this.donationCenterContract.methods.getSubsidy()))
       .pipe(
         switchMap(res => {
           console.log(res)
