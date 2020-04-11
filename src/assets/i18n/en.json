@@ -1,15 +1,15 @@
 {
     "onboarding": {
         "1": {
-            "title": "Recieve credits",
+            "title": "Rebre crèdits",
             "description": "L’aplicació permet rebre subsidis diaris de manera automàtica. Per tenir accés a aquestes prestacions, una autoritat ha de validar el seu usuari en el sistema. La quantia a percebre serà calculada segons el capital en reserva i el nombre de subsidiats total, arribant a un màxim de 40€. Per a realitzar la petició, únicament ha de clicar sobre el botó de rebre crèdit."
         },
         "2": {
-            "title": "Pay your tickets",
+            "title": "Realitza compres",
             "description": "Amb els diners rebuts pot realitzar les seves compres a establiments autoritzats i col·laboradors del sistema. Per realitzar els pagaments ha d’escanejar el codi QR del tiquet que li facilitarà l’establiment, revisar que els productes afegits siguin correctes i confirmar el pagament."
         },
         "3": {
-            "title": "Track your transactions",
+            "title": "Revisa els teus tiquets",
             "description": "Totes les adquisicions que realitzi quedaran registrades de forma anònima en el sistema i podrà consultar-les en qualsevol moment mitjançant la llista de tiquets pagats."
         },
         "dismiss": "Continuar"
