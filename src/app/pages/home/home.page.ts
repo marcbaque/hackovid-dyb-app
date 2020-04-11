@@ -87,7 +87,7 @@ export class HomePage implements OnInit {
       }
       
     } else {
-      ticket = JSON.parse('{"id":1,"seller":{"id":"0xF7d6d3b5e3bBbF46267dF46603a7508F5Ddec2c9","name":"Bonpreu"},"products":[{"id":4,"name":"Xocolata blanca amb xurros","_price":2.3,"count":2},{"id":2,"name":"Nocilla","_price":0.9,"count":1},{"id":1,"name":"Colacao","_price":1.2,"count":1},{"id":3,"name":"Donut de xocolata","_price":1,"count":10}],"date":1586516804311}');
+      ticket = JSON.parse('{"id":1,"seller":{"id":"0xA8680d25F1FE026f0DbC66f8177F2AfEa5931878","name":"Bonpreu"},"products":[{"id":1,"name":"Aigua","_price":0.4,"count":1}],"date":1586599421091}');
       this.presentPayModal(ticket)
     }
   }

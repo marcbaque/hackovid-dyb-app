@@ -2,38 +2,36 @@
     "onboarding": {
         "1": {
             "title": "Recieve credits",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec."
+            "description": "L’aplicació permet rebre subsidis diaris de manera automàtica. Per tenir accés a aquestes prestacions, una autoritat ha de validar el seu usuari en el sistema. La quantia a percebre serà calculada segons el capital en reserva i el nombre de subsidiats total, arribant a un màxim de 40€. Per a realitzar la petició, únicament ha de clicar sobre el botó de rebre crèdit."
         },
         "2": {
             "title": "Pay your tickets",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec."
+            "description": "Amb els diners rebuts pot realitzar les seves compres a establiments autoritzats i col·laboradors del sistema. Per realitzar els pagaments ha d’escanejar el codi QR del tiquet que li facilitarà l’establiment, revisar que els productes afegits siguin correctes i confirmar el pagament."
         },
         "3": {
             "title": "Track your transactions",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec."
+            "description": "Totes les adquisicions que realitzi quedaran registrades de forma anònima en el sistema i podrà consultar-les en qualsevol moment mitjançant la llista de tiquets pagats."
         },
-        "dismiss": "Continue"
+        "dismiss": "Continuar"
     },
     "signup": {
-        "title": "Signup",
-        "header": "Welcome!",
+        "title": "Registrar-se",
+        "header": "Benvingut!",
         "form": {
-            "name": "Full name",
-            "email": "Email",
-            "nif": "NIF",
-            "password": "Password",
-            "confirm-password": "Confirm password"
+            "name": "Nom i cognoms",
+            "email": "Correu electrònic",
+            "nif": "NIF"
         },
-        "submit": "Signup"
+        "submit": "Registrar-se"
     },
     "home": {
         "title": "Do Your Bit",
-        "balance": "Balance",
-        "ask": "Ask credit",
-        "transactions": "Transactions",
-        "no-data": "No transactions",
+        "balance": "Balanç",
+        "ask": "Afegir crèdit",
+        "transactions": "Compres realitzades",
+        "no-data": "No s'han realitzat compres",
         "verify": {
-            "products": "Products",
+            "products": "Productes",
             "total": "Total"
         }
     },
@@ -41,30 +39,30 @@
         "articles": "articles"
     },
     "ask-credit": {
-        "title": "Ask credit",
-        "dismiss": "Close",
+        "title": "Afegir crèdit",
+        "dismiss": "Tancar",
         "presentation": {
-            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla facilisis enim. In venenatis ante et commodo interdum. Suspendisse egestas auctor est, ut consectetur orci porta nec.",
-            "confirm": "Confirm"
+            "info": "Vostè està a punt de confirmar una petició de subsidi. Recordi que tan sols se li atorgarà en cas que estigui autoritzat a rebre’l i no hagi realitzat aquesta petició en les últimes 24 hores. La totalitat del subsidi diari serà afegida directament al seu compte.",
+            "confirm": "Confirmar"
         },
         "loading": {
-            "info": "Confirming transaction..."
+            "info": "Demanant crèdit..."
         },
         "success": {
-            "info": "Credit recieved succesfuly"
+            "info": "Crèdit afegit correctament"
         },
         "error": {
-            "500": "Generic error",
-            "fallback": "Unexpected error occurred"
+            "500": "Error genèric",
+            "fallback": "S'ha produit un error al demanar crèdit"
         }
     },
     "pay": {
-        "title": "Pay",
-        "dismiss": "Close",
-        "submit": "Pay now",
-        "waiting-transaction": "Waiting for transaction...",
-        "success": "Payment successful",
-        "error": "There was a problem with the payment",
-        "retry": "Retry"
+        "title": "Pagar",
+        "dismiss": "Tancar",
+        "submit": "Pagar ara",
+        "waiting-transaction": "Realitzant pagament...",
+        "success": "Pagament realitzat amb èxit!",
+        "error": "S'ha produit un error amb el pagament",
+        "retry": "Tornar a intentar"
     }
 }

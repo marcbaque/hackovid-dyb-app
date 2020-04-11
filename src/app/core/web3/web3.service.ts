@@ -86,10 +86,6 @@ export class Web3Service {
         switchMap(res => {
           console.log(res)
           return from(this.waitTransaction(res.transactionHash));
-        }),
-        catchError(err => {
-          console.log('ERROR: ', err)
-          return of(null)
         })
       )
   }
