@@ -53,7 +53,7 @@ export class HomeService {
 
   public payTicket(ticket: TicketEntity) {
     let txReceipt;
-    return this.web3Service.prepareTransfer(ticket.seller.id, ticket.total)
+    return this.web3Service.prepareTransfer(ticket.seller.id, parseFloat(ticket.total))
       .pipe(
         switchMap(receipt => {
           console.log(receipt)

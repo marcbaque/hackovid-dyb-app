@@ -51,6 +51,7 @@ export class PayComponent implements OnInit {
   onSubmit() {
     this.status = 'WAITING';
 
+    console.log(this.ticket)
     this.homeService.payTicket(this.ticket)
       .subscribe(res => {
         console.log(res)

@@ -60,7 +60,7 @@ export class Web3Service {
   }
 
   public prepareTransfer(recipient, amount) {
-    return from(this.signTransaction(this.tokenContract, this.tokenContract.methods.transfer(recipient, amount * 100)))
+    return from(this.signTransaction(this.tokenContract, this.tokenContract.methods.transfer(recipient, Math.round(amount * 100))))
       .pipe(
         map(receipt => {
           console.log(receipt)
