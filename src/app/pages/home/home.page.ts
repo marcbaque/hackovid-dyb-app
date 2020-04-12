@@ -87,7 +87,7 @@ export class HomePage implements OnInit {
       }
       
     } else {
-      ticket = JSON.parse('{"id":5,"seller":{"id":"0xf7Fd5FF11D06EF3eAA6c258B77B3636Cd645D4E9","name":"Lidl"},"products":[{"id":2,"name":"Cafè","_price":0.55,"count":1}],"date":1586636199552}');
+      ticket = JSON.parse('{"id":8,"seller":{"id":"0xb72E6A52Ce0B28A014dEF6Cb8dC2b083e1FEFf2c","name":"Bonpreu"},"products":[{"id":2,"name":"Pomes","_price":1.2,"count":2},{"id":1,"name":"Arròs","_price":0.7,"count":1}],"date":1586691388992}');
       this.presentPayModal(ticket)
     }
   }
