@@ -10,10 +10,12 @@ import { Router } from '@angular/router';
 })
 export class SignupPage implements OnInit {
 
+  public step = 0;
+
   public formData = {
-    name: '',
     email: '',
-    nif: ''
+    publicKey: '',
+    privateKey: ''
   }
 
   constructor(
@@ -23,10 +25,17 @@ export class SignupPage implements OnInit {
 
   ngOnInit() { }
 
+  public next() {
+    this.step = 1;
+
+    this.formData.publicKey = this.signupService.getNewKey().address;
+    this.formData.privateKey = this.signupService.getNewKey().privateKey;
+  }
+
   public signup() {
     console.log(this.formData)
 
-    this.signupService.signupUser(this.formData.name, this.formData.email, this.formData.nif)
+    this.signupService.signupUser(this.formData.email, this.formData.publicKey)
       .subscribe(res => {
         console.log(res)
         this.router.navigate(['/home']);

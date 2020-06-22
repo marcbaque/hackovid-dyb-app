@@ -17,11 +17,14 @@
     "signup": {
         "title": "Registrar-se",
         "header": "Benvingut!",
-        "form": {
-            "name": "Nom i cognoms",
-            "email": "Correu electrònic",
-            "nif": "NIF"
+        "keys": {
+            "title": "Generació de compte",
+            "description": "La teva clau és la següent, guarda-la a un lloc segur. Si la perds, no podràs recuperar el teu compte."
         },
+        "form": {
+            "email": "Correu electrònic"
+        },
+        "next": "Next",
         "submit": "Registrar-se"
     },
     "home": {

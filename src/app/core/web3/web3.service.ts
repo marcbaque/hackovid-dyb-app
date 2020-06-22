@@ -22,6 +22,15 @@ export class Web3Service {
     this.donationCenterContract = new web3.eth.Contract(JSON.parse(environment.donationCenterContractAbi), environment.donationCenterContractAddress)
   }
 
+  public generateAccount() {
+    let account = this.web3.eth.accounts.create();
+    this.saveAccount(account.privateKey);
+    console.log(account)
+    this.currentAccount = account.address;
+
+    return account
+  }
+
   public registerUser() {
     return new Observable(subscriber => {
       let account = this.getAccount();

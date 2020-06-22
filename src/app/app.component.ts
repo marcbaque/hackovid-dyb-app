@@ -38,7 +38,8 @@ export class AppComponent {
     if (!this.web3Service.getAccount()) {
       this.router.navigate(['/signup']);
     } else {
-      this.router.navigate(['/home']);
+      //this.router.navigate(['/home']);
+      this.router.navigate(['/signup']);
     }
   }
 }

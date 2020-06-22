@@ -4,26 +4,33 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" *ngIf="step === 0">
   <div class="signup-header ion-padding">
     {{ 'signup.header' | translate }}
   </div>
-  <ion-list lines="full" class="ion-no-margin">      
-    <ion-item>
-      <ion-label position="floating">{{ 'signup.form.name' | translate }} <ion-text color="danger">*</ion-text></ion-label>
-      <ion-input [(ngModel)]="formData.name"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">{{ 'signup.form.email' | translate }} <ion-text color="danger">*</ion-text></ion-label>
-      <ion-input [(ngModel)]="formData.email"></ion-input>
-    </ion-item>
+  <ion-item color="transparent">
+    <ion-label position="floating">{{ 'signup.form.email' | translate }} <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input [(ngModel)]="formData.email"></ion-input>
+  </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">{{ 'signup.form.nif' | translate }} <ion-text color="danger">*</ion-text></ion-label>
-      <ion-input [(ngModel)]="formData.nif"></ion-input>
-    </ion-item>
-  </ion-list>
+  <div class="ion-padding">
+    <ion-button (click)="next()" expand="block" class="ion-no-margin">{{ 'signup.next' | translate }}</ion-button>
+  </div>
+</ion-content>
+
+<ion-content class="ion-padding"*ngIf="step === 1">
+  <div class="signup-header ion-padding">
+    {{ 'signup.keys.title' | translate }}
+  </div>
+
+  <div class="signup-description ion-padding">
+    {{ 'signup.keys.description' | translate }}
+  </div>
+
+  <div class="signup-key ion-padding">
+    {{ formData.privateKey }}
+  </div>
 
   <div class="ion-padding">
     <ion-button (click)="signup()" expand="block" class="ion-no-margin">{{ 'signup.submit' | translate }}</ion-button>

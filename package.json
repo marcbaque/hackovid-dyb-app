@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
-    "@enchainte/sdk": "^0.2.0",
+    "@enchainte/sdk": "^0.3.6",
     "@ionic-native/barcode-scanner": "^5.23.0",
     "@ionic-native/core": "^5.0.7",
     "@ionic-native/qr-scanner": "^5.23.0",

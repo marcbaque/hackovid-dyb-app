@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 import TicketEntity from 'src/app/core/entities/ticket.entity';
 import ProductEntity from 'src/app/core/entities/product.entity';
 import { tick } from '@angular/core/testing';
+import { EnchainteService } from 'src/app/core/web3/enchainte.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,8 @@ export class HomeService {
 
   constructor(
     public http: HttpClient,
-    public web3Service: Web3Service
+    public web3Service: Web3Service,
+    public enchainteService: EnchainteService
   ) { }
 
   public getBalance() {
@@ -70,6 +72,9 @@ export class HomeService {
         }),
         switchMap(() => {
           return this.web3Service.waitTransaction(txReceipt.transactionHash);
+        }),
+        switchMap(() => {
+          return this.enchainteService.writeTicket(ticket)
         })
       );
   }

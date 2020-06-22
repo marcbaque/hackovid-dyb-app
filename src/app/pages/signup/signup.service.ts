@@ -15,15 +15,17 @@ export class SignupService {
     public web3Service: Web3Service
   ) { }
 
-  public signupUser(name, email, nif) {
+  public getNewKey() {
+    return this.web3Service.generateAccount();
+  }
+
+  public signupUser(email, publicKey) {
     return this.web3Service.registerUser()
       .pipe(
         switchMap(res => {
           const body = {
-            public_key: res,
-            name: name,
+            public_key: publicKey,
             email: email,
-            nif: nif
           }
           return this.http.post(`${environment.apiUrl}/buyer`, body)
         })
